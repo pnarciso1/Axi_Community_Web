@@ -31,7 +31,7 @@ export default function Navigation() {
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
       className={`
-        fixed top-0 left-0 right-0 z-50
+        fixed top-10 left-0 right-0 z-40
         transition-all duration-300
         ${isScrolled 
           ? 'bg-deep-indigo/80 backdrop-blur-lg shadow-lg' 

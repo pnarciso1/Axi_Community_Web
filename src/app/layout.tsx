@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
+import UtilityBar from '@/components/UtilityBar';
 import Navigation from '@/components/Navigation';
 import Bubbles from '@/components/ui/Bubbles';
 
@@ -37,6 +38,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className="underwater-bg min-h-screen relative">
           <Bubbles />
+          <UtilityBar />
           <Navigation />
           <main className="relative z-10">
             {children}
