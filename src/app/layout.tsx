@@ -11,10 +11,19 @@ export const metadata: Metadata = {
   description: 'A community-driven health management app where Connection is Medicine. Meet Axi, your AI health companion who connects you to others with your condition.',
   keywords: ['chronic illness', 'health community', 'patient support', 'caregiver support', 'health tracking', 'AI companion'],
   authors: [{ name: 'Axi Community' }],
+  icons: {
+    icon: [
+      { url: '/favicon.png', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', type: 'image/png' },
+    ],
+  },
   openGraph: {
     title: 'Axi Community - Healing Happens Better, Together',
     description: 'Meet Axi—your AI health companion who connects you to the community you\'ve been looking for.',
     type: 'website',
+    images: [{ url: '/visuals/AxiAvatar.png' }],
   },
 };
 
