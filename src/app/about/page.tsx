@@ -93,13 +93,10 @@ export default function AboutPage() {
               transition={{ duration: 0.6 }}
               className="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full bg-white/5 border border-white/10"
             >
-              <Image
-                src="/visuals/AxiAvatar.png"
-                alt="Axi"
-                width={20}
-                height={20}
-                className="object-contain"
-              />
+              <svg className="w-5 h-5 text-accent-cyan" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 8.25v3m0 0v3m0-3h3m-3 0H9" />
+              </svg>
               <span className="text-sm text-white/70">Our Story</span>
             </motion.div>
 
@@ -109,8 +106,8 @@ export default function AboutPage() {
             transition={{ delay: 0.1, duration: 0.6 }}
             className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6"
           >
-            Building the{' '}
-            <span className="text-gradient">community</span> we wished we had
+            Reimagining healthcare,{' '}
+            <span className="text-gradient">together</span>
           </motion.h1>
 
           <motion.p
@@ -119,8 +116,8 @@ export default function AboutPage() {
             transition={{ delay: 0.2, duration: 0.6 }}
             className="text-xl text-white/70 max-w-2xl mx-auto"
           >
-            Axi Community was born from personal experience with chronic illness and a 
-            deep belief that no one should have to navigate their health journey alone.
+            PeopleCare.ai was born from a belief that navigating healthcare shouldn&apos;t 
+            require a medical degree, a finance background, or going it alone.
           </motion.p>
         </div>
       </section>
@@ -142,14 +139,17 @@ export default function AboutPage() {
 
               <div className="space-y-4 text-white/70 leading-relaxed">
                 <p>
-                  Living with a chronic or rare condition can feel incredibly isolating. 
-                  Between doctor appointments, symptom flares, and the emotional toll, 
-                  it&apos;s easy to feel like you&apos;re swimming alone in an endless ocean.
+                  The healthcare system is broken—not because of bad intentions, but because 
+                  it was never designed with the patient at the center. Between confusing bills, 
+                  complex care decisions, and the emotional toll of managing health challenges, 
+                  people are left feeling lost and alone.
                 </p>
                 <p>
-                  We created Axi Community to be the liferaft we all needed—a place 
-                  where patients and caregivers can find their people, track their health, 
-                  and feel genuinely supported.
+                  We built PeopleCare.ai to change that. Our platform brings together three 
+                  essential pillars of support: <span className="text-blue-400">Financial Intelligence</span> to 
+                  fight billing errors and denials, <span className="text-emerald-400">Clinical Intelligence</span> to 
+                  help navigate care decisions, and <span className="text-rose-400">Community Intelligence</span>—powered 
+                  by Axi—to connect people with others who truly understand.
                 </p>
                 <p className="text-white font-semibold">
                   Because we believe that connection is medicine.
@@ -158,13 +158,14 @@ export default function AboutPage() {
 
               <GlassCard className="mt-8 p-6" hover={false}>
                 <div className="flex gap-4 items-start">
-                  <span className="text-4xl">🌊</span>
+                  <span className="text-4xl">💙</span>
                   <div>
                     <p className="text-white/90 italic mb-2">
-                      &quot;The mission isn&apos;t just to build an app—it&apos;s to create a sanctuary 
-                      where healing can happen through human connection.&quot;
+                      &quot;The mission isn&apos;t just to build technology—it&apos;s to give every person the 
+                      support team they deserve, whether they&apos;re managing a chronic condition, fighting 
+                      a bill, or simply looking for someone who gets it.&quot;
                     </p>
-                    <p className="text-sm text-white/50">— The Axi Team</p>
+                    <p className="text-sm text-white/50">— The PeopleCare Team</p>
                   </div>
                 </div>
               </GlassCard>
