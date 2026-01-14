@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
-import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
 export default function Navigation() {
@@ -44,19 +43,16 @@ export default function Navigation() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
             <motion.div
-              whileHover={{ rotate: 10 }}
-              className="w-10 h-10"
+              whileHover={{ scale: 1.05 }}
+              className="w-10 h-10 rounded-lg bg-gradient-to-br from-accent-cyan/20 to-soft-violet/20 border border-accent-cyan/30 flex items-center justify-center"
             >
-              <Image
-                src="/visuals/AxiAvatar.png"
-                alt="Axi"
-                width={40}
-                height={40}
-                className="object-contain"
-              />
+              <svg className="w-6 h-6 text-accent-cyan" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 8.25v3m0 0v3m0-3h3m-3 0H9" />
+              </svg>
             </motion.div>
             <span className="text-xl font-bold text-gradient">
-              Axi Community
+              PeopleCare.ai
             </span>
           </Link>
 
