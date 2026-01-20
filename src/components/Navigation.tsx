@@ -93,7 +93,7 @@ export default function Navigation() {
                 transition-all duration-300
               "
             >
-              Join Waitlist
+              Signup/Login
             </Link>
           </div>
 
@@ -165,7 +165,7 @@ export default function Navigation() {
                   font-semibold
                 "
               >
-                Join Waitlist
+                Signup/Login
               </Link>
             </div>
           </motion.div>
