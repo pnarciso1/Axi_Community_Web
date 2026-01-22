@@ -4,10 +4,12 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import LoginModal from '@/components/ui/LoginModal';
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -80,8 +82,8 @@ export default function Navigation() {
                 )}
               </Link>
             ))}
-            <Link
-              href="/#waitlist"
+            <button
+              onClick={() => setIsLoginModalOpen(true)}
               className="
                 px-4 py-2
                 text-sm font-semibold
@@ -94,7 +96,7 @@ export default function Navigation() {
               "
             >
               Signup/Login
-            </Link>
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -154,9 +156,11 @@ export default function Navigation() {
                   {link.label}
                 </Link>
               ))}
-              <Link
-                href="/#waitlist"
-                onClick={() => setIsMobileMenuOpen(false)}
+              <button
+                onClick={() => {
+                  setIsMobileMenuOpen(false);
+                  setIsLoginModalOpen(true);
+                }}
                 className="
                   block w-full text-center py-3
                   bg-gradient-to-r from-accent-cyan/20 to-soft-violet/20
@@ -166,11 +170,17 @@ export default function Navigation() {
                 "
               >
                 Signup/Login
-              </Link>
+              </button>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* Login Modal */}
+      <LoginModal 
+        isOpen={isLoginModalOpen} 
+        onClose={() => setIsLoginModalOpen(false)} 
+      />
     </motion.nav>
   );
 }
