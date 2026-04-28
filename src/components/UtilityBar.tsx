@@ -3,7 +3,7 @@
 import Link from 'next/link';
 
 const products = [
-  { name: 'Wellspace', href: 'https://wellspace.peoplecare.ai' },
+  { name: 'Axi Community', href: 'https://www.goaxi.ai' },
   { name: 'MyCareClaim', href: 'https://www.mycareclaim.com' },
 ];
 
